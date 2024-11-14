@@ -96,9 +96,8 @@
         <div class="">
           <span>
             <h4 class="leading-[1em] block opacity-80 text-sm font-normal m-0">Now Streaming</h4>
-            <h3 class="block text-[1em] leading-[1em] m-0"><a class="no_click"
-                href="/movie/283995-guardians-of-the-galaxy-vol-2/watch" title="Now Streaming on Hotstar">Watch
-                Now</a></h3>
+            <h3 class="block text-[1em] leading-[1em] m-0">Watch
+                Now</h3>
           </span>
         </div>
       </div>
