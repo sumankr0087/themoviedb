@@ -53,7 +53,7 @@
 
         <!-- User Options for Desktop -->
         <div class="hidden lg:flex items-center gap-x-4">
-          <button class="hover:text-blue-300 font-bold">
+          <button class="font-bold">
             <svg viewBox="0 0 16 16" fill="currentColor" class="w-6 h-6">
               <path
                 d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />

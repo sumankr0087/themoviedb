@@ -6,13 +6,8 @@
         <div class="min-w-full w-full rounded-none">
           <div
             style="background-image: url('https://media.themoviedb.org/t/p/w1000_and_h450_multi_faces/aJn9XeesqsrSLKcHfHP4u5985hn.jpg');">
-            <div class="background_gradient"
-              style="background-image: linear-gradient(to right, rgba(10.5, 31.5, 73.5, 1) 20%, rgba(10.5, 31.5, 73.5, 0) 50%);">
-            </div>
             <div class="p-[1.25rem] z-4 overflow-hidden rounded-lg" style="width: calc(((100vw / 2.222222) - 40px) / 1.5);
-            min-width: calc(((100vw / 2.222222) - 40px) / 1.5);
-            height: calc((100vw / 2.222222) - 40px);
-            min-height: calc((100vw / 2.222222) - 40px)">
+            background-image: linear-gradient(to right, rgba(10.5, 31.5, 73.5, 1) 20%, rgba(10.5, 31.5, 73.5, 0) 50%);">
               <img class="w-full"
                 src="https://media.themoviedb.org/t/p/w116_and_h174_face/y4MBh0EjBlMuOzv9axM4qJlmhzz.jpg"
                 srcset="https://media.themoviedb.org/t/p/w116_and_h174_face/y4MBh0EjBlMuOzv9axM4qJlmhzz.jpg 1x, https://media.themoviedb.org/t/p/w220_and_h330_face/y4MBh0EjBlMuOzv9axM4qJlmhzz.jpg 2x"
@@ -91,10 +86,10 @@
     </div>
 
     <!-- Content visible only on desktop -->
-    <div class="relative hidden lg:block min-h-[650px] bg-gray-900 text-white"
+    <div class="relative hidden lg:block min-h-[595px] bg-gray-900 text-white"
       :style="{ backgroundImage: `url('https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/aJn9XeesqsrSLKcHfHP4u5985hn.jpg')` }">
       <div class="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/70 to-transparent"></div>
-      <div class="mx-auto px-16 py-8 relative z-10">
+      <div class="mx-auto custom_bg px-16 py-8 relative z-10">
         <div class="lg:flex flex-col md:flex-row gap-8">
           <div class="w-80 flex-shrink-0">
             <img :src="movie.Poster" :alt="movie.Title" class="rounded shadow-lg w-full">
@@ -212,5 +207,9 @@ export default defineComponent({
 <style scoped>
 .backdrop-blur {
   backdrop-filter: blur(10px);
+}
+
+.custom_bg {
+    background-image: linear-gradient(to right, rgba(10.5, 31.5, 73.5, 1) calc((50vw - 170px) - 340px), rgba(10.5, 31.5, 73.5, 0.84) 50%, rgba(10.5, 31.5, 73.5, 0.84) 100%);
 }
 </style>
