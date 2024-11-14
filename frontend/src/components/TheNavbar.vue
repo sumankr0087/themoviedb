@@ -2,7 +2,6 @@
   <nav class="bg-[#011e37] text-white">
     <div class="px-4 lg:px-16">
       <div class="flex items-center justify-between h-16">
-        <!-- Mobile Menu Button -->
         <button class="block lg:hidden p-2">
           <svg viewBox="0 0 16 16" fill="currentColor" class="w-8 h-8 text-white">
             <path fill-rule="evenodd"
@@ -11,14 +10,12 @@
           </svg>
         </button>
 
-        <!-- Center Logo for Mobile -->
         <div class="block lg:hidden absolute left-1/2 transform -translate-x-1/2">
           <img
             src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg"
             alt="The Movie Database (TMDB)" width="50" height="40" />
         </div>
 
-        <!-- Desktop Navigation Menu -->
         <div class="hidden lg:flex items-center gap-x-6">
           <img
             src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg"
@@ -38,7 +35,6 @@
           </div>
         </div>
 
-        <!-- Right-side Icons for Desktop -->
         <div class="flex lg:hidden gap-x-4">
           <div>
             <svg viewBox="0 0 16 16" fill="currentColor" class="size-6">
@@ -51,7 +47,6 @@
             alt="Search Icon" width="30" height="24" />
         </div>
 
-        <!-- User Options for Desktop -->
         <div class="hidden lg:flex items-center gap-x-4">
           <button class="font-bold">
             <svg viewBox="0 0 16 16" fill="currentColor" class="w-6 h-6">
@@ -75,8 +70,7 @@
       </div>
     </div>
 
-    <!-- Sub-navigation Links -->
-    <div class="bg-white py-4 text-black flex justify-center space-x-6">
+    <div class="bg-white py-3 text-black flex justify-center space-x-6">
       <div v-for="link in ['Overview', 'Media', 'Fandom', 'Share']" :key="link" class="flex items-center space-x-2">
         <div>{{ link }}</div>
         <span>

@@ -7,9 +7,7 @@
             <div class="inline-block w-16 h-16 rounded-full p-1 bg-[#081c22]">
               <div class="relative inline-block w-full h-full text-center" data-bar-color="#21d07a">
                 <div class="progress-container">
-                  <!-- <canvas ref="canvas"></canvas> -->
                   <canvas ref="canvas" height="120" width="120" style="height: 60px; width: 60px;"></canvas>
-
                 </div>
               </div>
             </div>
@@ -86,7 +84,6 @@
       </div>
     </div>
 
-    <!-- Fixed Footer for Mobile and Tablet Views -->
     <footer class="lg:hidden fixed bottom-0 left-0 w-full bg-[#032541] py-2">
       <div class="flex gap-4 justify-center py-3 rounded-b-lg">
         <div class="provider">
@@ -97,7 +94,7 @@
           <span>
             <h4 class="leading-[1em] block opacity-80 text-sm font-normal m-0">Now Streaming</h4>
             <h3 class="block text-[1em] leading-[1em] m-0">Watch
-                Now</h3>
+              Now</h3>
           </span>
         </div>
       </div>
@@ -140,12 +137,12 @@
 export default {
   data() {
     return {
-      progress: 76, // Example progress percentage
-      radius: 50,   // Circle radius
-      lineWidth: 10, // Line width for the circle
-      trackColor: '#2c462b', // Track color (green)
-      progressColor: '#21d07a', // Progress color (light green)
-      canvasSize: 120, // Size of the canvas (width and height)
+      progress: 76,
+      radius: 50,
+      lineWidth: 10,
+      trackColor: '#2c462b',
+      progressColor: '#21d07a',
+      canvasSize: 120,
     };
   },
   mounted() {
@@ -156,26 +153,21 @@ export default {
       const canvas = this.$refs.canvas;
       const ctx = canvas.getContext('2d');
 
-      // Check if ctx is available (canvas context)
       if (ctx) {
-        // Clear canvas before drawing new circle
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-        // Set the canvas width and height based on canvasSize
         canvas.width = this.canvasSize;
         canvas.height = this.canvasSize;
 
-        // Draw the background circle (track)
         ctx.beginPath();
-        ctx.arc(this.canvasSize / 2, this.canvasSize / 2, this.radius, 0, 2 * Math.PI); // Full circle (360 degrees)
+        ctx.arc(this.canvasSize / 2, this.canvasSize / 2, this.radius, 0, 2 * Math.PI);
         ctx.lineWidth = this.lineWidth;
         ctx.strokeStyle = this.trackColor;
         ctx.stroke();
 
-        // Draw the progress arc
-        const progressAngle = (this.progress / 100) * 2 * Math.PI; // Calculate angle based on progress
+        const progressAngle = (this.progress / 100) * 2 * Math.PI;
         ctx.beginPath();
-        ctx.arc(this.canvasSize / 2, this.canvasSize / 2, this.radius, -Math.PI / 2, -Math.PI / 2 + progressAngle); // Arc from -90 degrees
+        ctx.arc(this.canvasSize / 2, this.canvasSize / 2, this.radius, -Math.PI / 2, -Math.PI / 2 + progressAngle);
         ctx.lineWidth = this.lineWidth;
         ctx.strokeStyle = this.progressColor;
         ctx.stroke();
@@ -204,7 +196,6 @@ export default {
 
 canvas {
   border-radius: 50%;
-  /* Optional: To make the canvas round */
 }
 </style>
 

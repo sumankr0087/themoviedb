@@ -1,6 +1,5 @@
 <template>
   <div class="relative">
-    <!-- Content visible on mobile/tablet -->
     <div class="bg-cover bg-no-repeat lg:hidden mb-[9rem]">
       <div class="shadow-none min-w-full w-full h-auto rounded-none">
         <div class="min-w-full w-full rounded-none">
@@ -85,7 +84,6 @@
       </div>
     </div>
 
-    <!-- Content visible only on desktop -->
     <div class="relative hidden lg:block min-h-[595px] bg-gray-900 text-white"
       :style="{ backgroundImage: `url('https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/aJn9XeesqsrSLKcHfHP4u5985hn.jpg')` }">
       <div class="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/70 to-transparent"></div>
